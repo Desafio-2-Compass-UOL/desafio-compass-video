@@ -6,7 +6,7 @@ function App() {
   return (
    <div className="App">
       <Header />
-      <h2>Movie</h2>
+      {/* <h2>Movie</h2> */}
    </div>
   )
 }
