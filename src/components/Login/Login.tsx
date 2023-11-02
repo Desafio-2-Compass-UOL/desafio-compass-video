@@ -11,7 +11,7 @@ const Login = (props: any) => {
             <BotaoLoginTMDB msgBotao={props.msgBotao}/>
             {props.msgObs}
             <figure>
-                <img src={props.logoImg} alt="logotipo compass uol"/>
+                <img src={props.logoImg} width="350" alt="logotipo compass uol"/>
             </figure>
         </section>
 

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Montserrat:wght@600;700&family=Poppins:wght@700&family=Work+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Lato:wght@400;700&family=Montserrat:wght@600;700&family=Poppins:wght@700&family=Work+Sans:wght@700&display=swap');
+
 *{
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
@@ -11,17 +13,51 @@
     text-align: center;
     position: relative;
     width: 780px; /*50vw;*/
-    height: 450px; /*50vh;*/
+    height: 420px; /*50vh;*/
     border-radius: 20px;
-    background-color:gray;
+    background-color:rgb(75, 72, 72);
     margin: auto;
-    /*top: calc((100vh - 50vh) / 2);*/
-    top: calc((100vh - 450px) / 2);
+    top: calc((100vh - 420px) / 2);
     opacity: .9;
 }
 
 .quadro h1{
     color: white;
+    font-family: 'Work Sans', sans-serif;
     font-weight: 700;
     font-size: 44px;
+    margin: 30px 0 0 0;
+}
+
+.quadro h2{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 0 250px 0 250px
+}
+
+.quadro aside{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 20px 0 0 0;
+}
+
+.quadro aside span{
+    color: rgb(255,255,255,.6);
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 800px){
+    .quadro{
+        width: 400px;
+    }
+
+    .quadro h2{
+        padding: 0 50px 0 50px
+    }
 }

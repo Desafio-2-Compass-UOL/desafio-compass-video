@@ -1,10 +1,19 @@
-.botaoLoginTMDB{
+*{
     box-sizing: border-box;
-    background-color: #037AEB;
+}
+
+.botaoLoginTMDB{
     width: 374px;
-    height: 48px;
+    height: 500px;
     border-radius: 6px;
-    padding: 24px 0px 24px 0px;
     border: none;
+    color: rgb(255,255,255);
+    background-color: #037AEB;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 15px 0 15px 0;
+    cursor: pointer;
 }
 
