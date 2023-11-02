@@ -1,0 +1,10 @@
+.botaoLoginTMDB{
+    box-sizing: border-box;
+    background-color: #037AEB;
+    width: 374px;
+    height: 48px;
+    border-radius: 6px;
+    padding: 24px 0px 24px 0px;
+    border: none;
+}
+
