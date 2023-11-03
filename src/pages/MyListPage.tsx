@@ -3,7 +3,7 @@ import './MyListPage.css'
 const MyListPage = () => {
   return (
     <div>
-        MyListPage
+      <h2>AAAA</h2>
     </div>
   )
 }

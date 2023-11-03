@@ -46,13 +46,13 @@ const Header = () => {
                     </NavLink>
                 </li>
             </ul>
-            </nav> 
+          
             <div className='box'>
                 <div>
                     <Search />
                 </div>
                 <div>
-                    <NavLink to='/src/pages/MyListPage.tsx'>
+                    <NavLink to='/mylistpage'>
                         <MyList />
                     </NavLink>
                 </div>
@@ -62,6 +62,7 @@ const Header = () => {
                     </NavLink>
                 </div>
             </div>
+            </nav>
         </header>
     )
 }
