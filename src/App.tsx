@@ -13,7 +13,7 @@ function App() {
   )*/
 
   return (
-   <div className="teste">
+   <div className="App">
     <Login titulo="Compass Video" 
            subTitulo="Acesse sua conta para ver nossos títulos"  
            msgBotao="INICIAR SESSÃO COM TMDB"

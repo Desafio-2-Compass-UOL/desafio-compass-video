@@ -2,11 +2,10 @@
     box-sizing: border-box;
 }
 
-.teste{
+body{
     background-image: url("./assets/imagens/fundoLoginTMDB.png");
-    background-size: 1000px;
+    background-size: 100vw 100vh;
     background-repeat: no-repeat;
-    /*height: 100vh;*/
     margin: 0;
     padding: 0;
 }

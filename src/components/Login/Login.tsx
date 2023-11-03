@@ -2,7 +2,7 @@ import BotaoLoginTMDB from '../BotaoLoginTMDB/BotaoLoginTMDB';
 import estilos from './Login.module.css';
 
 const Login = (props: any) => {
-
+    
     return(
 
         <section className={estilos.quadro}>
