@@ -14,7 +14,6 @@ const BotaoLoginTMDB = (props: any) => {
 
         if(requestToken.success){
             console.log(requestToken);
-            //window.location.href = 'https://www.google.com';
             window.location.href = `https://www.themoviedb.org/authenticate/${requestToken.request_token}`;
 
         }
