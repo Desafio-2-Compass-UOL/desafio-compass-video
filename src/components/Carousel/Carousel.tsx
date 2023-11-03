@@ -3,27 +3,25 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import "./Carousel.css";
+// import "./Carousel.css";
 import { useState, useEffect } from "react";
 import axios, { AxiosResponse } from "axios";
 
 export interface Item {
   id: number;
-  name: string;
   poster: string;
 }
 
 interface CarouselProps {
-    endpoint: string;
+  endpoint: string;
 }
 
-function convertToItems(items: any[]): Item[] {
+function convertToItems(items: Item[]): Item[] {
   const itemsConverted: Item[] = [];
 
   items.forEach((item) => {
     const newItem: Item = {
       id: item.id,
-      name: item.title,
       poster: item.poster_path,
     };
 
@@ -31,12 +29,11 @@ function convertToItems(items: any[]): Item[] {
 
     return itemsConverted;
   });
-
+  
   return itemsConverted;
 }
 
 function Carousel({ endpoint }: CarouselProps) {
-
   const [items, setItems] = useState<Item[]>([]);
 
   useEffect(() => {
@@ -47,17 +44,16 @@ function Carousel({ endpoint }: CarouselProps) {
         const options = {
           headers: {
             Authorization:
-              "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2Y2QxNGM5MzMxMjBlYTc1ZGE1YWQwZjdlOTU1ZTkwYiIsInN1YiI6IjY1NDNkNjQ2Mjg2NmZhMDEzOGE1NjhlOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Ma_nMxeQmjxWhgIyzLGdUKCrdLf7eVx8HDYhLTDttLM",
+            'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NWNjMjMzMDYxNjg1NzQyZTVkMDc4ZmI1MjM3MjdmMCIsInN1YiI6IjY1NDNkNjQ2Mjg2NmZhMDEzOGE1NjhlOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.BCgmJNLUK3enLKAhnFcnqHBw4KdG0AxKvNHDBwAZBUE',
           },
         };
-        response = await axios.get<AxiosResponse<Item[]>>(
-            `https://api.themoviedb.org/3/${endpoint}?language=en-US&page=1`,
+        response = await axios.get<AxiosResponse<Item[]>> (
+          'https://api.themoviedb.org' + endpoint,
           options
         );
-
-        // console.log(response);
+          
       } catch (error) {
-        console.error("Deu merda");
+        console.error("Deu merda", error);
       }
 
       const itemsConverted = convertToItems(response?.data.results);
@@ -68,6 +64,7 @@ function Carousel({ endpoint }: CarouselProps) {
     useEffectFunction();
   }, [endpoint]);
 
+  
   const settings = {
     dots: true,
     infinite: false,
@@ -107,9 +104,8 @@ function Carousel({ endpoint }: CarouselProps) {
     <div>
       <Slider {...settings}>
         {items.map((item) => (
-          <div key= {item.id}>
-            <img src={`https://image.tmdb.org/t/p/w500/${item.poster}`} alt={item.name} />
-            <h2>{item.name}</h2>
+          <div key={item.id}>
+            <img src={`https://image.tmdb.org/t/p/w500/${item.poster}`} alt='movie poster' />
           </div>
         ))}
       </Slider>
