@@ -3,5 +3,23 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(173, 167, 167);
+ 
 }
+
+body {
+    background-color: rgb(223, 220, 220);
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    gap: .5em;
+    transition: .5s;
+  }
+
+  a:hover {
+    color: #02E7F5;
+  }

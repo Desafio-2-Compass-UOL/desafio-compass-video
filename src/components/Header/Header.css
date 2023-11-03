@@ -1,23 +1,18 @@
 header {
     display: flex;
     justify-content: space-between;
-    padding: 1em 3em;
-    
+    padding: 1em 3.5em;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;    
 }
-.menu {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
-a {
-    text-decoration: none;
-    list-style: none;
-    /* border: solid 1px green; */
-    display: flex;
-    align-items: center;
-    gap: .5em;
-  }
 
 .box {
     display: flex;
@@ -46,8 +41,4 @@ form {
     display: flex;
     align-items: center;
     /* border: solid 1px rgb(255, 0, 255); */
-}
-
-.active {
-    color: rgb(80, 145, 175);
 }
