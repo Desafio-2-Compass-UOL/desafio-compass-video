@@ -46,7 +46,7 @@ const Header = () => {
                     </NavLink>
                 </li>
             </ul>
-          
+            </nav>
             <div className='box'>
                 <div>
                     <Search />
@@ -62,7 +62,7 @@ const Header = () => {
                     </NavLink>
                 </div>
             </div>
-            </nav>
+           
         </header>
     )
 }

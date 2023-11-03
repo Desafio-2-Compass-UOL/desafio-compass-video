@@ -1,3 +1,5 @@
+import './Search.css'
+
 import React, { useEffect, useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import { BiSearch } from 'react-icons/bi';
@@ -56,7 +58,7 @@ const Search = () => {
   // };
 
   return (
-    <div>
+    <div className='buttonContainer'>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
