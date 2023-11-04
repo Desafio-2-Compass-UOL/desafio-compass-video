@@ -19,7 +19,7 @@ function App() {
            subTitulo="Acesse sua conta para ver nossos títulos"  
            msgBotao="INICIAR SESSÃO COM TMDB"
            msgObs={<aside><span>Não tem conta?</span> Acesse como convidado</aside>}
-           logoImg="src/assets/imagens/logoCompassUolNegativo.png"/>
+           logoImg="src/assets/imagensLogin/logoCompassUolNegativo.png"/>
    </div>
   )
 
