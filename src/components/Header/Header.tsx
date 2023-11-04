@@ -8,7 +8,7 @@ import { AiTwotoneStar } from 'react-icons/ai';
 
 import Search from '../Search/Search';
 import MyList from '../MyList/MyList';
-import Avatar from '../Avatar/Avatar';
+import Avatar from '../MenuUser/MenuUser';
 
 const Header = () => {
   return (
