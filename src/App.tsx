@@ -5,10 +5,7 @@ import './App.css'
 import Header from './components/Header/Header'
 import MyListPage from './pages/MyListPage'
 import Home from './pages/Home'
-// import SearchPage from './pages/SearchPage'
-
 import SearchPage from './pages/SearchPage'
-// import Home from './pages/Home'
 
 function App() {
 
@@ -18,7 +15,6 @@ function App() {
     <BrowserRouter>
     <Header />
       <Routes>
-        {/* <Route path='searchpage' element={<SearchPage />} /> */}
         {/* <Route path='home' element={<Home />} /> */}
         <Route path='searchpage' element={<SearchPage />} />
         <Route path='mylistpage' element={<MyListPage />} />
