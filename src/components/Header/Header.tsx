@@ -8,7 +8,9 @@ import { AiTwotoneStar } from 'react-icons/ai';
 
 import Search from '../Search/Search';
 import MyList from '../MyList/MyList';
-import Avatar from '../MenuUser/MenuUser';
+import MenuUser from '../MenuUser/MenuUser';
+
+const logo = <img src="/src/assets/compass.uol_Negativo 1.png" alt="Logo CompassUol" />
 
 const Header = () => {
   return (
@@ -17,7 +19,7 @@ const Header = () => {
             <ul>
                 <li>
                     <NavLink to='/'>
-                        <img src="/src/assets/compass.uol_Negativo 1.png" alt="" />
+                        {logo}
                     </NavLink>
                 </li>
                 <li>
@@ -57,9 +59,9 @@ const Header = () => {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to='/'>
-                        <Avatar />
-                    </NavLink>
+                    <div>
+                    <MenuUser />
+                    </div>
                 </div>
             </div>
            
