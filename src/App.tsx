@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/'          element={<LoginPage />} />
-        <Route path='prevhome'   element={<Header />} />
+        <Route path='prevhome'   element={<Header    />} />
         <Route path='searchpage' element={<SearchPage />} />
         <Route path='mylistpage' element={<MyListPage />} />
       </Routes>
