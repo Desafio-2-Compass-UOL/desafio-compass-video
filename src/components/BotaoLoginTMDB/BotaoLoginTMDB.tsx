@@ -13,8 +13,10 @@ const BotaoLoginTMDB = (props: any) => {
     useEffect(() => {
 
         if(requestToken.success){
+            
             console.log(requestToken);
-            window.location.href = `https://www.themoviedb.org/authenticate/${requestToken.request_token}`;
+            //window.location.href = `https://www.themoviedb.org/authenticate/${requestToken.request_token}`;
+            window.location.href = `https://www.themoviedb.org/authenticate/${requestToken.request_token}?redirect_to=http://localhost:5173/prevhome`;
 
         }
         

@@ -1,28 +1,25 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import Header from './components/Header/Header'
-import Login from './components/Login/Login'
+import Header     from './components/Header/Header'
+import MyListPage from './pages/MyListPage'
+import SearchPage from './pages/SearchPage'
+import LoginPage  from './pages/LoginPage'
+
 
 function App() {
 
-  /*return (
-   <div className="App">
-    <BrowserRouter>
-    <Header />
-    <Login/>
-   </div>
-  )*/
-
   return (
    <div className="App">
-    <Login titulo="Compass Video" 
-           subTitulo="Acesse sua conta para ver nossos títulos"  
-           msgBotao="INICIAR SESSÃO COM TMDB"
-           msgObs={<aside><span>Não tem conta?</span> Acesse como convidado</aside>}
-           logoImg="src/assets/imagensLogin/logoCompassUolNegativo.png"/>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/'          element={<LoginPage />} />
+        <Route path='prevhome'   element={<Header />} />
+        <Route path='searchpage' element={<SearchPage />} />
+        <Route path='mylistpage' element={<MyListPage />} />
+      </Routes>
+    </BrowserRouter>
    </div>
   )
-
 }
-
 export default App
+//<Route path='/' element={<Header />} />
