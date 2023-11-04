@@ -18,19 +18,24 @@ interface CarouselProps {
 
 function convertToItems(items: Item[]): Item[] {
   const itemsConverted: Item[] = [];
-
-  items.forEach((item) => {
-    const newItem: Item = {
-      id: item.id,
-      poster: item.poster_path,
-    };
-
+  if (items) {
+    items.map((item) => {
+      const newItem: Item = {
+        id: item.id,
+        poster: item.poster_path,
+      };
+    
     itemsConverted.push(newItem);
 
     return itemsConverted;
   });
   
   return itemsConverted;
+} else {
+  console.log('Não foi dessa vez', items);
+  console.log('Não foi dessa vez', itemsConverted);
+
+
 }
 
 function Carousel({ endpoint }: CarouselProps) {
@@ -38,7 +43,7 @@ function Carousel({ endpoint }: CarouselProps) {
 
   useEffect(() => {
     const useEffectFunction = async () => {
-      let response = undefined;
+      let response = null;
 
       try {
         const options = {
