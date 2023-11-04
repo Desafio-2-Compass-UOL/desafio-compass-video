@@ -5,6 +5,7 @@ import './App.css'
 import Header from './components/Header/Header'
 import MyListPage from './pages/MyListPage'
 import SearchPage from './pages/SearchPage'
+import Footer from './components/Foolter/Foolter'
 // import Home from './pages/Home'
 
 function App() {
@@ -18,8 +19,8 @@ function App() {
         {/* <Route path='home' element={<Home />} /> */}
         <Route path='searchpage' element={<SearchPage />} />
         <Route path='mylistpage' element={<MyListPage />} />
-        
       </Routes>
+      <Footer/>
     </BrowserRouter>
    </div>
   )
