@@ -18,13 +18,13 @@ const Header = () => {
             <nav>
             <ul>
                 <li>
-                    <NavLink to='/'>
+                    <NavLink to='/home'>
                         {logo}
                     </NavLink>
                 </li>
                 <li>
                     <NavLink 
-                    to='/'
+                    to='/home'
                     >
                         <AiFillHome/>  <span>Início</span>
                     </NavLink>
