@@ -1,20 +1,33 @@
 import Carousel from "../components/Carousel/Carousel";
+import "./Home.css";
 
 function Home() {
   return (
-    <section className="home-catalog">
-        <img src='https://placehold.co/600x400' alt='imagem improvisada pra eu visualizar melhor a minha parte' />
-      <div className="popular-shows">
-        <p>Séries em alta</p>
-        <Carousel endpoint="/3/tv/popular?language=en-US&page=1" />
+    <section className="catalog">
+      <img
+        src="https://placehold.co/600x400"
+        alt="imagem improvisada pra eu visualizar melhor a minha parte"
+      />
+      <div className="carousel">
+        <p>Halloween Collection</p>
+        <Carousel collection="halloween" />
       </div>
 
-      <div className="popular-movies">
+      <div className="carousel">
+        <p>Séries em alta</p>
+        <Carousel type="tv" category="popular" />
+      </div>
+
+      <div className="carousel">
         <p>Filmes em Alta</p>
-        <Carousel endpoint={"/3/movie/popular?language=en-US&page=1"} />
+        <Carousel type="movie" category="popular" />
+      </div>
+
+      <div className="carousel">
+        <p>Novidades em filmes</p>
+        <Carousel type="movie" category="upcoming" />
       </div>
     </section>
-   
   );
 }
 

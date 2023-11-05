@@ -8,6 +8,7 @@ import Home from './pages/Home'
 import SearchPage from './pages/SearchPage'
 import Footer from './components/Foolter/Foolter'
 // import LoginPage from './pages/LoginPage'
+import HalloweenCollectionPage from './pages/CollectionPage';
 
 function App() {
 
@@ -20,7 +21,12 @@ function App() {
         <Route path='home' element={<Home/>} />
         <Route path='searchpage' element={<SearchPage />} />
         <Route path='mylistpage' element={<MyListPage />} />
+        <Route path='collectionpage' element={<HalloweenCollectionPage/>} />
+        
       </Routes>
+
+      <Home />
+      
       <Footer/>
     </BrowserRouter>
 
