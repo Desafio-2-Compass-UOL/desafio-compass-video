@@ -18,12 +18,14 @@ function App() {
       <Routes>
         {/* <Route path='/' element={<LoginPage />} /> */}
         <Route path='home' element={<Home/>} />
+        {/* <Route path='series' element={<Series/>} /> */}
+        {/* <Route path='filmes' element={<Filmes/>} /> */}
+        {/* <Route path='celebridades' element={<Celebridades/>} /> */}
         <Route path='searchpage' element={<SearchPage />} />
         <Route path='mylistpage' element={<MyListPage />} />
       </Routes>
       <Footer/>
     </BrowserRouter>
-
    </div>
   )
 }

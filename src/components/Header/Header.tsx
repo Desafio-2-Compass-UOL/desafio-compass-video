@@ -30,19 +30,19 @@ const Header = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/'
+                    <NavLink to='/series'
                     >
                         <PiTelevisionBold/> <span>Séries</span>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/'
+                    <NavLink to='/filmes'
                     >
                         <RiMovie2Fill/> <span>Filmes</span>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/'
+                    <NavLink to='/celebridades'
                     >
                         <AiTwotoneStar/> <span>Celebridades</span>
                     </NavLink>
