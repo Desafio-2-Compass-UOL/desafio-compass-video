@@ -1,0 +1,38 @@
+.container-footer {
+    margin-top: 22rem; /*remover*/
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #090B13;
+    padding: 4rem 2rem 2rem 2rem;
+  
+}
+.footer-list {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    color: #fff;
+    padding: 2.5rem 0;
+    list-style: none;
+    font-size: 0.80rem;
+    
+}
+.information-footer {
+    color: #FFF;
+    font-size: 0.80rem;
+    text-align: center;
+    width: 36%;
+}
+.copy {
+    padding-top: 2rem;
+    color: #FFF;
+    text-align: center;
+    font-family: Lato;
+    font-size: 0.80rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.125rem; /* 150% */
+}
