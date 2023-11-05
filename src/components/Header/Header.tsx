@@ -1,6 +1,7 @@
 import './Header.css'
 
 import { NavLink } from 'react-router-dom'
+
 import { AiFillHome } from 'react-icons/ai';
 import { PiTelevisionBold } from 'react-icons/pi';
 import { RiMovie2Fill } from 'react-icons/ri';
