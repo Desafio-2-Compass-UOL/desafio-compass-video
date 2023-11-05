@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Search = () => {
   const [search, setSearch] = useState<string>("");
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [category, setCategory] = useState('Tudo');
   const navigate = useNavigate();
   const categories = ['Tudo', 'Filmes', 'Coleções', 'Séries', 'Celebridades'];
