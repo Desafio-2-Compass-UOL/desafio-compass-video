@@ -89,7 +89,7 @@ function Carousel({ endpoint }: CarouselProps) {
         {items.map((item) => (
           <div key={item.id}>
             <img
-              src={`https://image.tmdb.org/t/p/w500/${item.poster}`}
+              src={`https://image.tmdb.org/t/p/w200/${item.poster}`}
               alt="movie poster"
             />
           </div>
