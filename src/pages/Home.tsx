@@ -3,6 +3,7 @@ import Carousel from "../components/Carousel/Carousel";
 function Home() {
   return (
     <section className="home-catalog">
+        <img src='https://placehold.co/600x400' alt='imagem improvisada pra eu visualizar melhor a minha parte' />
       <div className="popular-shows">
         <p>Séries em alta</p>
         <Carousel endpoint="/3/tv/popular?language=en-US&page=1" />
@@ -13,6 +14,7 @@ function Home() {
         <Carousel endpoint={"/3/movie/popular?language=en-US&page=1"} />
       </div>
     </section>
+   
   );
 }
 
