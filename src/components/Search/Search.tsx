@@ -6,7 +6,7 @@ import { BiSearch } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
 
 const Search = () => {
-  const [search, setSearch] = useState<string>("");
+  const [search, setSearch] = useState("");
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [category, setCategory] = useState('Tudo');
   const navigate = useNavigate();

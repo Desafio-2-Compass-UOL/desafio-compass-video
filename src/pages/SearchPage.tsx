@@ -63,14 +63,12 @@ const SearchPage = () => {
       <Search />
       <h2>Resultados para: {query}</h2>
       
-      {/* Exiba os resultados usando o componente Carousel */}
       <h3>Filmes</h3>
       <Carousel endpoint={`/search/movie?query=${query}`} />
 
       <h3>Séries</h3>
       <Carousel endpoint={`/search/tv?query=${query}`} />
 
-      {/* Adicione outras categorias, como 'Coleções' e 'Celebridades', se necessário */}
     </div>
   );
 };
