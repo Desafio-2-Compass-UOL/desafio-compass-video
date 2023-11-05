@@ -2,8 +2,8 @@ import './MyListPage.css'
 
 const MyListPage = () => {
   return (
-    <div>
-      <h2>AAAA</h2>
+    <div className='listpage'>
+      <h2>Page List</h2>
     </div>
   )
 }
