@@ -7,7 +7,7 @@ import MyListPage from './pages/MyListPage'
 import Home from './pages/Home'
 import SearchResultsPage from './pages/SearchResultsPage'
 import Footer from './components/Foolter/Foolter'
-// import LoginPage from './pages/LoginPage'
+// import LoginPage from '.   /pages/LoginPage'
 
 function App() {
 
