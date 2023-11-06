@@ -28,6 +28,12 @@
     padding-top: 2rem;
     
 }
+
+.movies-container img {
+        max-width: 200px;
+        height: auto;
+        border-radius: 5%;
+}
 .no-results {
     color: rgba(255, 255, 255, 0.60);
     font-size: 1.5rem;
