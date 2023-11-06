@@ -26,12 +26,9 @@ function App() {
         <Route path='mylistpage' element={<MyListPage />} />
         <Route path='collectionpage' element={<HalloweenCollectionPage/>} />
       </Routes>
-
-      <Home />
-      
       <Footer/>
     </BrowserRouter>
    </div>
   )
 }
-export default App
+export default App;
