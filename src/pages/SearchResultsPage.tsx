@@ -66,7 +66,7 @@ const SearchResultsPage = () => {
             {searchResults.map((result) => (
               <div key={result.id}>
                 <img
-                  src={`https://image.tmdb.org/t/p/w200/${result.poster_path}`}
+                  src={`https://image.tmdb.org/t/p/w300/${result.poster_path}`}
                   alt={result.title || result.name} 
                 />
               </div>
