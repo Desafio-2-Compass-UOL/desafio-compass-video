@@ -28,7 +28,7 @@ const Footer = () => {
                 © 2021 Disney y sus entidades relacionadas. Todos los derechos reservados.
                 </p>
             </div>
-            </div>
+        </div>
     </div>
   )
 }
