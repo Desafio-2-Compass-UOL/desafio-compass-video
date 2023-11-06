@@ -18,7 +18,7 @@ const Search = () => {
     e.preventDefault();
 
     if (!search) return;
-    navigate(`/search?q=${search}`);
+    navigate(`/searchresultspage?q=${search}`);
     setSearch("");
   };
 
@@ -36,6 +36,7 @@ const Search = () => {
 
   return (
     <div>
+      
       {showPrincipalButton ? (
         <button className='principal' onClick={showButtonContainer}>
           <BiSearch className='icon' />Buscar
