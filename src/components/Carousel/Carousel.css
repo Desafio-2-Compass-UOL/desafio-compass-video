@@ -1,0 +1,35 @@
+.carousel p {
+    font-family: 'Work Sans';
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.slick-slider {
+    margin-bottom: 30px;
+}
+
+.slick-slide {
+    max-width: 250px;
+    height: auto;
+}
+
+
+.slick-item {
+    max-width: 200px;
+    height: auto;
+    margin-right: 15px;
+}
+
+
+.slick-slider img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 5%;
+
+}
+
+.slick-slide:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
