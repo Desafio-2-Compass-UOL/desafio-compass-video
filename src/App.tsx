@@ -7,7 +7,8 @@ import MyListPage from './pages/MyListPage'
 import Home from './pages/Home'
 import SearchResultsPage from './pages/SearchResultsPage'
 import Footer from './components/Foolter/Foolter'
-// import LoginPage from '.   /pages/LoginPage'
+// import LoginPage from './pages/LoginPage'
+import HalloweenCollectionPage from './pages/CollectionPage';
 
 function App() {
 
@@ -23,7 +24,11 @@ function App() {
         {/* <Route path='celebridades' element={<Celebridades/>} /> */}
         <Route path='searchresultspage' element={<SearchResultsPage />} />
         <Route path='mylistpage' element={<MyListPage />} />
+        <Route path='collectionpage' element={<HalloweenCollectionPage/>} />
       </Routes>
+
+      <Home />
+      
       <Footer/>
     </BrowserRouter>
    </div>

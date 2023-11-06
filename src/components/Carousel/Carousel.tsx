@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./Carousel.css";
 
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -11,7 +12,9 @@ interface Item {
 }
 
 interface CarouselProps {
-  endpoint: string;
+  type?: string;
+  category?: string;
+  collection?: string;
 }
 
 function convertToItems<T extends { id: number; poster_path: string }>(
@@ -26,10 +29,17 @@ function convertToItems<T extends { id: number; poster_path: string }>(
   return itemsConverted;
 }
 
-function Carousel({ endpoint }: CarouselProps) {
+function Carousel({ type, category, collection }: CarouselProps) {
   const [items, setItems] = useState<Item[]>([]);
   const apiKey =
     "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NGRlN2RjYWU5Y2NhZmViYjMwMGNiZmY1NThlZmExZiIsInN1YiI6IjY1NDNkNjQ2Mjg2NmZhMDEzOGE1NjhlOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.t6pN4cXFs_4TnjCtoWOllm4xJKZIYQWqHmxVksfEGTQ";
+  let url = "";
+
+  if (collection) {
+    url = `https://api.themoviedb.org/3/search/collection?query=${collection}&include_adult=false&language=en-US&page=1`;
+  } else {
+    url = `https://api.themoviedb.org/3/${type}/${category}?language=en-US&page=1`;
+  }
 
   useEffect(() => {
     const options = {
@@ -38,7 +48,7 @@ function Carousel({ endpoint }: CarouselProps) {
       },
     };
     axios
-      .get(`https://api.themoviedb.org${endpoint}`, options)
+      .get(url, options)
       .then((res) => {
         const itemsConverted = convertToItems(res.data.results);
         setItems(itemsConverted);
@@ -46,13 +56,14 @@ function Carousel({ endpoint }: CarouselProps) {
       .catch((error) => {
         console.debug("Erro ao consultar a TMDB API: ", error);
       });
-  }, [endpoint]);
+  }, [category]);
 
   const settings = {
+    variableWidth: true,
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 4,
     initialSlide: 0,
     responsive: [
@@ -68,8 +79,8 @@ function Carousel({ endpoint }: CarouselProps) {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToShow: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },
@@ -86,14 +97,19 @@ function Carousel({ endpoint }: CarouselProps) {
   return (
     <div>
       <Slider {...settings}>
-        {items.map((item) => (
-          <div key={item.id}>
-            <img
-              src={`https://image.tmdb.org/t/p/w200/${item.poster}`}
-              alt="movie poster"
-            />
-          </div>
-        ))}
+        {items.map((item) => {
+          if (item.poster === null) {
+            return;
+          }
+          return (
+              <div className="slick-item" key={item.id}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w500/${item.poster}`}
+                  alt="movie poster"
+                />
+              </div>
+          );
+        })}
       </Slider>
     </div>
   );
