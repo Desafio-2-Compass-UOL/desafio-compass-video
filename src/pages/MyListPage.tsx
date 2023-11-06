@@ -3,7 +3,7 @@ import './MyListPage.css'
 const MyListPage = () => {
   return (
     <div className='listpage'>
-      <h2>Page List</h2>
+      <img src='https://placehold.co/600x400' alt='imagem improvisada pra eu visualizar melhor a minha parte' />
     </div>
   )
 }
