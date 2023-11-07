@@ -9,6 +9,7 @@ import SearchResultsPage from './pages/SearchResultsPage'
 import Footer from './components/Foolter/Foolter'
 // import LoginPage from './pages/LoginPage'
 import HalloweenCollectionPage from './pages/CollectionPage';
+import MoviesPage from './pages/MoviesPage'
 
 function App() {
 
@@ -19,8 +20,7 @@ function App() {
       <Routes>
         {/* <Route path='/' element={<LoginPage />} /> */}
         <Route path='/' element={<Home/>} />
-        {/* <Route path='series' element={<Series/>} /> */}
-        {/* <Route path='filmes' element={<Filmes/>} /> */}
+        <Route path='filmes' element={<MoviesPage/>} />
         {/* <Route path='celebridades' element={<Celebridades/>} /> */}
         <Route path='searchresultspage' element={<SearchResultsPage />} />
         <Route path='mylistpage' element={<MyListPage />} />
