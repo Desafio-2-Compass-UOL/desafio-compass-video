@@ -4,12 +4,12 @@ import './App.css'
 
 import Header from './components/Header/Header'
 import MyListPage from './pages/MyListPage'
-import Home from './pages/Home'
 import SearchResultsPage from './pages/SearchResultsPage'
 import Footer from './components/Foolter/Foolter'
-// import LoginPage from './pages/LoginPage'
+import LoginPage from './pages/LoginPage'
 import HalloweenCollectionPage from './pages/CollectionPage';
 import MoviesPage from './pages/MoviesPage'
+import Home from './pages/Home'
 
 function App() {
 
@@ -18,8 +18,8 @@ function App() {
     <BrowserRouter>
     <Header/>
       <Routes>
-        {/* <Route path='/' element={<LoginPage />} /> */}
-        <Route path='/' element={<Home/>} />
+        <Route path='/' element={<LoginPage />} />
+        <Route path='home' element={<Home/>} />
         <Route path='filmes' element={<MoviesPage/>} />
         {/* <Route path='celebridades' element={<Celebridades/>} /> */}
         <Route path='searchresultspage' element={<SearchResultsPage />} />
