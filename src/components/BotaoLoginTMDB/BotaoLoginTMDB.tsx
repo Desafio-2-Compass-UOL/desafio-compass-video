@@ -60,36 +60,3 @@ const BotaoLoginTMDB = (props: any) => {
 }
 
 export default BotaoLoginTMDB;
-
-
-// import { useAuth } from '../../context/AuthContext';
-// import './BotaoLoginTMDB.module.css'
-
-// const BotaoLoginTMDB = (props: any) => {
-//   const { login } = useAuth();
-
-//   const accessTokenTMDB = import.meta.env.VITE_ACCESS_TOKEN_AUTH;
-//   const options = {
-//     method: 'GET',
-//     headers: {
-//       accept: 'application/json',
-//       Authorization: `Bearer ${accessTokenTMDB}`
-//     }
-//   };
-
-//   const solicitaTokenTMDB = () =>
-//     fetch('https://api.themoviedb.org/3/authentication/token/new', options)
-//       .then(response => response.json())
-//       .then(response => {
-//         console.log(response);
-//         window.location.href = `https://www.themoviedb.org/authenticate/${response.request_token}?redirect_to=http://localhost:5173/home`;
-//         login(); 
-//       })
-//       .catch(err => console.error(err));
-
-//   return (
-//     <button onClick={solicitaTokenTMDB} className='botaoLoginTMDB'>{props.msgBotao}</button>
-//   );
-// };
-
-// export default BotaoLoginTMDB;
