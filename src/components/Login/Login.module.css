@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Montserrat:wght@600;700&family=Poppins:wght@700&family=Work+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Lato:wght@400;700&family=Montserrat:wght@600;700&family=Poppins:wght@700&family=Work+Sans:wght@700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.quadro{
+    text-align: center;
+    position: relative;
+    width: 700px; 
+    height: 380px; 
+    border-radius: 20px;
+    background-color:rgb(75, 72, 72);
+    margin: auto;
+    top: calc((100vh - 420px) / 2);
+    opacity: .9;
+}
+
+.quadro h1{
+    color: white;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    padding-top: 15px;
+}
+
+.quadro h2{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 20px 200px 20px 200px
+}
+
+.quadro aside{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 20px 0 20px 0;
+}
+
+.quadro aside span{
+    color: rgb(255,255,255,.6);
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 800px){
+    .quadro{
+        width: 400px;
+    }
+
+    .quadro h2{
+        padding: 15px 50px 15px 50px
+    }
+
+    .quadro aside{
+        margin: 30px 0 30px 0;
+    }
+}

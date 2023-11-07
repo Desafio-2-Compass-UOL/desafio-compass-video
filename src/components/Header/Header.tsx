@@ -1,6 +1,7 @@
 import './Header.css'
 
 import { NavLink } from 'react-router-dom'
+
 import { AiFillHome } from 'react-icons/ai';
 import { PiTelevisionBold } from 'react-icons/pi';
 import { RiMovie2Fill } from 'react-icons/ri';
@@ -18,9 +19,9 @@ const Header = () => {
             <nav>
             <ul>
                 <li>
-                    <NavLink to='/'>
+                    <div>
                         {logo}
-                    </NavLink>
+                    </div>
                 </li>
                 <li>
                     <NavLink 
@@ -30,19 +31,19 @@ const Header = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/'
+                    <NavLink to='/series'
                     >
                         <PiTelevisionBold/> <span>Séries</span>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/'
+                    <NavLink to='/filmes'
                     >
                         <RiMovie2Fill/> <span>Filmes</span>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/'
+                    <NavLink to='/celebridades'
                     >
                         <AiTwotoneStar/> <span>Celebridades</span>
                     </NavLink>
