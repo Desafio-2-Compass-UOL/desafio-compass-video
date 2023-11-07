@@ -56,7 +56,7 @@ function Carousel({ type, category, collection }: CarouselProps) {
       .catch((error) => {
         console.debug("Erro ao consultar a TMDB API: ", error);
       });
-  }, [category]);
+  }, []);
 
   const settings = {
     variableWidth: true,
