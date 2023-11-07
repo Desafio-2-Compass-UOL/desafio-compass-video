@@ -19,9 +19,9 @@ const Header = () => {
             <nav>
             <ul>
                 <li>
-                    <NavLink to='/'>
+                    <div>
                         {logo}
-                    </NavLink>
+                    </div>
                 </li>
                 <li>
                     <NavLink 

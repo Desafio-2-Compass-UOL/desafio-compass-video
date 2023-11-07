@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from 'react';
-
 import './MenuUser.css';
+// import { useAuth } from '../../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 const MenuUser = () => {
   const [isOpen, setIsOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   const openMenu = () => {
     setIsOpen(true);
@@ -35,6 +37,14 @@ const MenuUser = () => {
   const avatarRonald = <img src="/src/assets/Ellipse 9-1.png" alt="Avatar" />;
   const addButton = <img src="/src/assets/addButon.png" alt="Adicionar" />;
 
+  // const { logout } = useAuth();
+
+  const handleLogout = () => {
+    navigate(`/`); // Apenas para efeito;
+    // logout();
+    closeMenu();
+  };
+
   return (
     <div>
       <button onClick={openMenu}>{avatar}</button>
@@ -52,7 +62,7 @@ const MenuUser = () => {
               <li>Minha assinatura</li>
               <li>Minha conta</li>
               <li>Ajuda</li>
-              <li>Sair</li>
+              <li onClick={handleLogout}>Sair</li>
             </ul>
           </div>
         </div>
