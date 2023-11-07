@@ -6,11 +6,11 @@ import Header from "./components/Header/Header";
 import MyListPage from "./pages/MyListPage";
 import SearchResultsPage from "./pages/SearchResultsPage";
 import Footer from "./components/Foolter/Foolter";
-import MoviesPage from "./pages/MoviesCatalogPage";
+import MoviesPage from "./pages/MoviesPage";
 import TvShowsPage from "./pages/TvShowsCatalogPage";
 
 import LoginPage from "./pages/LoginPage";
-// import HalloweenCollectionPage from './pages/CollectionPage';
+import ActorPage from "./pages/ActorPage";
 import Home from "./pages/Home";
 
 function App() {
@@ -49,13 +49,13 @@ function App() {
               </>
             }
           />
-          {/*<Route path='celebrities'
+          <Route path='celebrities'
             element={
               <>
               <Header />
-                <CelebritiesPage />
+                <ActorPage />
               <Footer /> </>
-            }/> */}
+            }/>
           <Route
             path="searchresultspage"
             element={

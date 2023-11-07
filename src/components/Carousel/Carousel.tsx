@@ -8,9 +8,10 @@ import "./Carousel.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-interface Item {
+ interface Item {
   id: number;
   poster: string;
+
 }
 
 interface CarouselProps {
@@ -31,7 +32,7 @@ function convertToItems<T extends { id: number; poster_path: string }>(
   return itemsConverted;
 }
 
-function Carousel({ type, category, collection }: CarouselProps) {
+function Carousel({ type, category, collection}: CarouselProps) {
 
   const [items, setItems] = useState<Item[]>([]);
   
@@ -41,7 +42,8 @@ function Carousel({ type, category, collection }: CarouselProps) {
 
   if (collection) {
     url = `https://api.themoviedb.org/3/search/collection?query=${collection}&include_adult=false&language=en-US&page=1`;
-  } else {
+  } 
+  else {
     url = `https://api.themoviedb.org/3/${type}/${category}?language=en-US&page=1`;
   }
 
@@ -106,8 +108,9 @@ function Carousel({ type, category, collection }: CarouselProps) {
           if (item.poster === null) {
             return;
           }
+
           return (
-              <div className="slick-item" key={item.id} >
+              <div className="slick-item" key={item.id}>
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${item.poster}`}
                   alt="movie poster"
