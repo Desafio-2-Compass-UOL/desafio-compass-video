@@ -4,14 +4,14 @@ import './App.css'
 
 import Header from './components/Header/Header'
 import MyListPage from './pages/MyListPage'
-import Home from './pages/Home'
 import SearchResultsPage from './pages/SearchResultsPage'
 import Footer from './components/Foolter/Foolter'
-// import LoginPage from './pages/LoginPage'
-// import HalloweenCollectionPage from './pages/CollectionPage';
 import MoviesPage from './pages/MoviesCatalogPage'
 import TvShowsPage from './pages/TvShowsCatalogPage'
 
+import LoginPage from './pages/LoginPage'
+// import HalloweenCollectionPage from './pages/CollectionPage';
+import Home from './pages/Home'
 
 function App() {
 
@@ -20,8 +20,8 @@ function App() {
     <BrowserRouter>
     <Header/>
       <Routes>
-        {/* <Route path='/' element={<LoginPage />} /> */}
-        <Route path='/' element={<Home/>} />
+        <Route path='/' element={<LoginPage />} />
+        <Route path='home' element={<Home/>} />
         <Route path='filmes' element={<MoviesPage/>} />
         <Route path='series' element={<TvShowsPage />}/>
         {/* <Route path='celebridades' element={<Celebridades/>} /> */}
