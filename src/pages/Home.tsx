@@ -1,13 +1,14 @@
 import Carousel from "../components/Carousel/Carousel";
+import Hero from "../components/Hero/Hero";
 import "./Home.css";
 
 function Home() {
   return (
     <section className="catalog">
-      <img
-        src="https://placehold.co/600x400"
-        alt="imagem improvisada pra eu visualizar melhor a minha parte"
-      />
+      <div className="hero">
+        <Hero property1="default"/>
+      </div>
+
       <div className="carousel">
         <p>Halloween Collection</p>
         <Carousel collection="halloween" />
