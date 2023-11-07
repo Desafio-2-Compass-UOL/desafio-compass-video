@@ -7,7 +7,6 @@ import "./Carousel.css";
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
 
 interface Item {
   id: number;
@@ -20,10 +19,6 @@ interface CarouselProps {
   collection?: string;
 }
 
-interface CardProps {
-  id: number,
-}
-
 function convertToItems<T extends { id: number; poster_path: string }>(
   items: T[]
 ): Item[] {
@@ -34,18 +29,6 @@ function convertToItems<T extends { id: number; poster_path: string }>(
   });
 
   return itemsConverted;
-}
-
-function Cards({ id }: CardProps){
-  const navigate = useNavigate();
-
-  const handleCardClick = () => {
-    navigate('')
-  }
-
-  return (
-
-  ) 
 }
 
 function Carousel({ type, category, collection }: CarouselProps) {
@@ -138,3 +121,4 @@ function Carousel({ type, category, collection }: CarouselProps) {
 }
 
 export default Carousel;
+

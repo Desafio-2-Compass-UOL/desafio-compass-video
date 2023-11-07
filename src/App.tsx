@@ -12,6 +12,7 @@ import Footer from './components/Foolter/Foolter'
 import MoviesPage from './pages/MoviesCatalogPage'
 import TvShowsPage from './pages/TvShowsCatalogPage'
 
+
 function App() {
 
   return (
