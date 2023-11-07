@@ -1,5 +1,4 @@
 // import Ract from 'react';
-import { useNavigate } from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,6 +7,7 @@ import "./Carousel.css";
 
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 interface Item {
   id: number;
@@ -18,6 +18,10 @@ interface CarouselProps {
   type?: string;
   category?: string;
   collection?: string;
+}
+
+interface CardProps {
+  id: number,
 }
 
 function convertToItems<T extends { id: number; poster_path: string }>(
@@ -32,8 +36,19 @@ function convertToItems<T extends { id: number; poster_path: string }>(
   return itemsConverted;
 }
 
-function Carousel({ type, category, collection }: CarouselProps) {
+function Cards({ id }: CardProps){
   const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    navigate('')
+  }
+
+  return (
+
+  ) 
+}
+
+function Carousel({ type, category, collection }: CarouselProps) {
 
   const [items, setItems] = useState<Item[]>([]);
   
@@ -64,9 +79,6 @@ function Carousel({ type, category, collection }: CarouselProps) {
       });
   }, []);
 
-  const handleCardClick = (itemId: number) => {
-    navigate(`details/${itemId}`);
-  }
 
   const settings = {
     variableWidth: true,
@@ -112,7 +124,7 @@ function Carousel({ type, category, collection }: CarouselProps) {
             return;
           }
           return (
-              <div className="slick-item" key={item.id} onClick={() => handleCardClick(item.id)}>
+              <div className="slick-item" key={item.id} >
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${item.poster}`}
                   alt="movie poster"
