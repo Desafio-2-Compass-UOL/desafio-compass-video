@@ -10,6 +10,7 @@ import LoginPage from './pages/LoginPage'
 import HalloweenCollectionPage from './pages/CollectionPage';
 import MoviesPage from './pages/MoviesPage'
 import Home from './pages/Home'
+import TvShowsPage from './pages/TvShowsPage'
 
 function App() {
   return (
@@ -32,14 +33,14 @@ function App() {
                 <MoviesPage />
               <Footer /> </>
             }/>
-        {/*<Route path='seriespage'
+          <Route path='series'
             element={
               <>
               <Header />
-                <SeriesPage />
+                <TvShowsPage />
               <Footer /> </>
             }/>
-            <Route path='celebrities'
+              {/*<Route path='celebrities'
             element={
               <>
               <Header />
