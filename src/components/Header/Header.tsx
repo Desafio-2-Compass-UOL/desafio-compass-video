@@ -25,7 +25,7 @@ const Header = () => {
                 </li>
                 <li>
                     <NavLink 
-                    to='/'
+                    to='/home'
                     >
                         <AiFillHome/>  <span>Início</span>
                     </NavLink>
@@ -37,13 +37,13 @@ const Header = () => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/filmes'
+                    <NavLink to='/moviepage'
                     >
                         <RiMovie2Fill/> <span>Filmes</span>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/celebridades'
+                    <NavLink to='/celebrities'
                     >
                         <AiTwotoneStar/> <span>Celebridades</span>
                     </NavLink>

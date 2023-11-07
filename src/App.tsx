@@ -10,27 +10,71 @@ import LoginPage from './pages/LoginPage'
 import HalloweenCollectionPage from './pages/CollectionPage';
 import MoviesPage from './pages/MoviesPage'
 import Home from './pages/Home'
+import TvShowsPage from './pages/TvShowsPage'
 
 function App() {
-
   return (
-   <div className="App">
-    <BrowserRouter>
-    
-      <Routes>
-        <Route path='/' element={<LoginPage />} />
-        <Route path='home' element={<Home/>} />
-        <Route path='filmes' element={<MoviesPage/>} />
-        {/* <Route path='celebridades' element={<Celebridades/>} /> */}
-        <Route path='searchresultspage' element={<SearchResultsPage />} />
-        <Route path='mylistpage' element={<MyListPage />} />
-        <Route path='collectionpage' element={<HalloweenCollectionPage/>} />
-      </Routes>
-      
-    </BrowserRouter>
-   </div>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<LoginPage />} />
+          <Route path='home'
+            element={
+              <>
+                <Header />
+                <Home/>
+                <Footer />
+              </>     
+          } />
+          <Route path='moviepage'
+            element={
+              <>
+              <Header />
+                <MoviesPage />
+              <Footer /> </>
+            }/>
+          <Route path='series'
+            element={
+              <>
+              <Header />
+                <TvShowsPage />
+              <Footer /> </>
+            }/>
+              {/*<Route path='celebrities'
+            element={
+              <>
+              <Header />
+                <CelebritiesPage />
+              <Footer /> </>
+            }/> */}
+          <Route path='searchresultspage' 
+            element={
+              <>
+              <Header />
+              <SearchResultsPage />
+              <Footer />
+            </> 
+          } />
+          <Route path='mylistpage' 
+            element={
+              <>
+              <Header />
+              <MyListPage /> 
+              <Footer />
+            </> 
+          } />
+          <Route path='collectionpage' 
+            element={
+            <>
+              <Header />
+              <HalloweenCollectionPage />
+              <Footer />
+            </> 
+          } />
+        </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
+
 export default App;
-//<Header/>
-//<Footer/>
