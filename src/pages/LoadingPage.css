@@ -1,0 +1,22 @@
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .loader {
+    width: 50px;
+    padding: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: rgb(17, 168, 255);
+    --_m: 
+      conic-gradient(#0000 1%,#000),
+      linear-gradient(rgba(0, 0, 0, 9) 0 0) content-box;
+    -webkit-mask: var(--_m);
+            mask: var(--_m);
+    -webkit-mask-composite: source-out;
+            mask-composite: subtract;
+    animation: l3 1s infinite linear;
+  }
+  @keyframes l3 {to{transform: rotate(1turn)}}
