@@ -16,7 +16,7 @@ function App() {
   return (
    <div className="App">
     <BrowserRouter>
-    <Header/>
+    
       <Routes>
         <Route path='/' element={<LoginPage />} />
         <Route path='home' element={<Home/>} />
@@ -26,9 +26,11 @@ function App() {
         <Route path='mylistpage' element={<MyListPage />} />
         <Route path='collectionpage' element={<HalloweenCollectionPage/>} />
       </Routes>
-      <Footer/>
+      
     </BrowserRouter>
    </div>
   )
 }
 export default App;
+//<Header/>
+//<Footer/>
