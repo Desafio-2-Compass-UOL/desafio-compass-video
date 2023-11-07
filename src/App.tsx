@@ -18,6 +18,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<LoginPage />} />
+          <Route path='LoadingPage' element={<LoginPage />} />
           <Route path='home'
             element={
               <>
