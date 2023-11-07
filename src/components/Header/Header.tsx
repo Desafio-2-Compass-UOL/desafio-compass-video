@@ -16,10 +16,10 @@ const logo = <img src="/src/assets/compass.uol_Negativo 1.png" alt="Logo Compass
 const Header = () => {
   return (
         <header>
-            <nav>
-            <ul>
+            <nav className='nav-container'>
+            <ul className='nav-ul'>
                 <li>
-                    <div>
+                    <div className='logo'>
                         {logo}
                     </div>
                 </li>
@@ -54,7 +54,7 @@ const Header = () => {
                 <div>
                     <Search />
                 </div>
-                <div>
+                <div className='my-list-style'>
                     <NavLink to='/mylistpage'>
                         <MyList />
                     </NavLink>
