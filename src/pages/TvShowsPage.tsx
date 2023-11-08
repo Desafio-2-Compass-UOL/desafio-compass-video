@@ -5,7 +5,7 @@ function TvShowsPage() {
   return (
     <section className="catalog">
       <div className="hero">
-        <Hero property1="default" />
+        <Hero property1="default" contentType="tv" movieId={84958}/>
       </div>
 
       <div className="carousel">
