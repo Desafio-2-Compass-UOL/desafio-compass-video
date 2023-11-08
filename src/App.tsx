@@ -12,6 +12,9 @@ import TvShowsPage from "./pages/TvShowsCatalogPage";
 import LoginPage from "./pages/LoginPage";
 import ActorPage from "./pages/ActorPage";
 import Home from "./pages/Home";
+import CollectionPage from "./pages/CollectionPage";
+import MovieDetails from "./pages/MovieDetails";
+import SerieDetails from "./pages/SerieDetails";
 
 function App() {
   return (
@@ -49,13 +52,16 @@ function App() {
               </>
             }
           />
-          <Route path='celebrities'
+          <Route
+            path="celebrities"
             element={
               <>
-              <Header />
+                <Header />
                 <ActorPage />
-              <Footer /> </>
-            }/>
+                <Footer />{" "}
+              </>
+            }
+          />
           <Route
             path="searchresultspage"
             element={
@@ -76,16 +82,36 @@ function App() {
               </>
             }
           />
-          {/* <Route
-            path="collectionpage"
+          <Route
+            path="/collectionpage/:id"
             element={
               <>
                 <Header />
-                <HalloweenCollectionPage />
+                <CollectionPage />
                 <Footer />
               </>
             }
-          /> */}
+          />
+          <Route
+            path="/moviedetails/:id"
+            element={
+              <>
+                <Header />
+                <MovieDetails />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/seriedetails/:id"
+            element={
+              <>
+                <Header />
+                <SerieDetails />
+                <Footer />
+              </>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>
