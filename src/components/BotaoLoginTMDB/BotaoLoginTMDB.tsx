@@ -3,7 +3,7 @@ import estilos from './BotaoLoginTMDB.module.css';
 
 const BotaoLoginTMDB = (props: any) => {
 
-    const [requestToken, setRequestToken] = useState({success: false, request_token: null});
+    const [requestToken, setRequestToken] = useState({success: false, request_token: ''});
 
     const handlerRequestToken = (token: object) => {
         setRequestToken(token)
@@ -16,7 +16,8 @@ const BotaoLoginTMDB = (props: any) => {
             
             console.log(requestToken);
             //window.location.href = `https://www.themoviedb.org/authenticate/${requestToken.request_token}`;
-            window.location.href = `https://www.themoviedb.org/authenticate/${requestToken.request_token}?redirect_to=http://localhost:5173/home`;
+            //window.location.href = `https://www.themoviedb.org/authenticate/${requestToken.request_token}?redirect_to=http://localhost:5173/home`;
+            window.location.href = `https://www.themoviedb.org/authenticate/${requestToken.request_token}?redirect_to=http://localhost:5173/LoadingPage`;
 
         }
         

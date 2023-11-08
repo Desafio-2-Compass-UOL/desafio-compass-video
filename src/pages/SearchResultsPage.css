@@ -3,8 +3,6 @@
     flex-direction: column;
     padding: 10em;
     min-height: 100vh;
-
-
 }
 
 .container-results > h2 {
@@ -39,4 +37,23 @@
     font-size: 1.5rem;
     font-weight: 400;
     margin-top: 3rem;
+}
+@media (max-width: 768px) {
+    .container-results {
+        padding: 2em;
+        padding-top: 19rem;
+        display: flex;
+        justify-content: center;
+    }
+    .container-results > h2 {
+        font-size: 1.2rem;
+    }
+    .query {
+        font-size: 1.4rem;
+    }
+    .movies-container img {
+        max-width: 300px;
+        height: auto;
+        border-radius: 5%;
+}
 }

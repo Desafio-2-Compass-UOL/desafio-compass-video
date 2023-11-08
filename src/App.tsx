@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import './App.css'
 
+import LoadingPage from './pages/LoandingPage'
+
 import Header from './components/Header/Header'
 import MyListPage from './pages/MyListPage'
 import SearchResultsPage from './pages/SearchResultsPage'
@@ -11,6 +13,7 @@ import HalloweenCollectionPage from './pages/CollectionPage';
 import MoviesPage from './pages/MoviesPage'
 import Home from './pages/Home'
 import TvShowsPage from './pages/TvShowsPage'
+// import PrivateRoute from './components/PrivateRoutes/PrivateRoutes'
 
 function App() {
   return (
@@ -18,7 +21,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<LoginPage />} />
-          <Route path='LoadingPage' element={<LoginPage />} />
+          
+          <Route path='LoadingPage' element={<LoadingPage />} />
           <Route path='home'
             element={
               <>
@@ -79,3 +83,5 @@ function App() {
 }
 
 export default App;
+
+//<Route path='LoadingPage' element={<LoginPage />} />
