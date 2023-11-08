@@ -8,9 +8,6 @@ Welcome to the <a href="https://compass.uol/pt/home/?utm_source=google-ads&utm_m
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
