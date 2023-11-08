@@ -1,87 +1,121 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import './App.css'
+import "./App.css";
 
-import LoadingPage from './pages/LoandingPage'
+import Header from "./components/Header/Header";
+import MyListPage from "./pages/MyListPage";
+import SearchResultsPage from "./pages/SearchResultsPage";
+import Footer from "./components/Foolter/Foolter";
+import MoviesPage from "./pages/MoviesPage";
+import TvShowsPage from "./pages/TvShowsCatalogPage";
 
-import Header from './components/Header/Header'
-import MyListPage from './pages/MyListPage'
-import SearchResultsPage from './pages/SearchResultsPage'
-import Footer from './components/Foolter/Foolter'
-import LoginPage from './pages/LoginPage'
-import HalloweenCollectionPage from './pages/CollectionPage';
-import MoviesPage from './pages/MoviesPage'
-import Home from './pages/Home'
-import TvShowsPage from './pages/TvShowsPage'
-// import PrivateRoute from './components/PrivateRoutes/PrivateRoutes'
+import LoginPage from "./pages/LoginPage";
+import ActorPage from "./pages/ActorPage";
+import Home from "./pages/Home";
+import CollectionPage from "./pages/CollectionPage";
+import MovieDetails from "./pages/MovieDetails";
+import SerieDetails from "./pages/SerieDetails";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<LoginPage />} />
-          
-          <Route path='LoadingPage' element={<LoadingPage />} />
-          <Route path='home'
+          <Route path="/" element={<LoginPage />} />
+          <Route
+            path="home"
             element={
               <>
                 <Header />
-                <Home/>
+                <Home />
                 <Footer />
-              </>     
-          } />
-          <Route path='moviepage'
+              </>
+            }
+          />
+          <Route
+            path="moviepage"
             element={
               <>
-              <Header />
+                <Header />
                 <MoviesPage />
-              <Footer /> </>
-            }/>
-          <Route path='series'
+                <Footer />{" "}
+              </>
+            }
+          />
+          <Route
+            path="series"
             element={
               <>
-              <Header />
+                <Header />
                 <TvShowsPage />
-              <Footer /> </>
-            }/>
-              {/*<Route path='celebrities'
+                <Footer />{" "}
+              </>
+            }
+          />
+          <Route
+            path="celebrities"
             element={
               <>
-              <Header />
-                <CelebritiesPage />
-              <Footer /> </>
-            }/> */}
-          <Route path='searchresultspage' 
+                <Header />
+                <ActorPage />
+                <Footer />{" "}
+              </>
+            }
+          />
+          <Route
+            path="searchresultspage"
             element={
               <>
-              <Header />
-              <SearchResultsPage />
-              <Footer />
-            </> 
-          } />
-          <Route path='mylistpage' 
+                <Header />
+                <SearchResultsPage />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="mylistpage"
             element={
               <>
-              <Header />
-              <MyListPage /> 
-              <Footer />
-            </> 
-          } />
-          <Route path='collectionpage' 
+                <Header />
+                <MyListPage />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/collectionpage/:id"
             element={
-            <>
-              <Header />
-              <HalloweenCollectionPage />
-              <Footer />
-            </> 
-          } />
+              <>
+                <Header />
+                <CollectionPage />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/moviedetails/:id"
+            element={
+              <>
+                <Header />
+                <MovieDetails />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/seriedetails/:id"
+            element={
+              <>
+                <Header />
+                <SerieDetails />
+                <Footer />
+              </>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>
-  )
+  );
 }
 
 export default App;
-
-//<Route path='LoadingPage' element={<LoginPage />} />

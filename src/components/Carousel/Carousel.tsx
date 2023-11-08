@@ -1,13 +1,12 @@
 // import Ract from 'react';
-import { useNavigate } from 'react-router-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Carousel.css";
 
-
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 interface Item {
   id: number;
@@ -33,10 +32,8 @@ function convertToItems<T extends { id: number; poster_path: string }>(
 }
 
 function Carousel({ type, category, collection }: CarouselProps) {
-  const navigate = useNavigate();
-
   const [items, setItems] = useState<Item[]>([]);
-  
+
   const apiKey =
     "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0NGRlN2RjYWU5Y2NhZmViYjMwMGNiZmY1NThlZmExZiIsInN1YiI6IjY1NDNkNjQ2Mjg2NmZhMDEzOGE1NjhlOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.t6pN4cXFs_4TnjCtoWOllm4xJKZIYQWqHmxVksfEGTQ";
   let url = "";
@@ -63,10 +60,6 @@ function Carousel({ type, category, collection }: CarouselProps) {
         console.debug("Erro ao consultar a TMDB API: ", error);
       });
   }, []);
-
-  const handleCardClick = (itemId: number) => {
-    navigate(`details/${itemId}`);
-  }
 
   const settings = {
     variableWidth: true,
@@ -104,6 +97,18 @@ function Carousel({ type, category, collection }: CarouselProps) {
     ],
   };
 
+  const getLink = (id: number) => {
+    if (collection) {
+      return `/collectionpage/${id}`;
+    } else if (type == "tv") {
+      return `/seriedetails/${id}`;
+    } else if (type == "movie") {
+      return `/moviedetails/${id}`;
+    } else {
+      return "/home"; // TODO criar error page
+    }
+  };
+
   return (
     <div>
       <Slider {...settings}>
@@ -111,13 +116,16 @@ function Carousel({ type, category, collection }: CarouselProps) {
           if (item.poster === null) {
             return;
           }
+
           return (
-              <div className="slick-item" key={item.id} onClick={() => handleCardClick(item.id)}>
+            <Link to={getLink(item.id)}>
+              <div className="slick-item" key={item.id}>
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${item.poster}`}
                   alt="movie poster"
                 />
               </div>
+            </Link>
           );
         })}
       </Slider>

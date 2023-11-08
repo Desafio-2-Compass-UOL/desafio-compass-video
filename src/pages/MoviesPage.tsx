@@ -9,7 +9,7 @@ function MoviesPage() {
       </div>
 
       <div className="carousel">
-        <p>Molhores notas</p>
+        <p>Melhores notas</p>
         <Carousel type="movie" category="top_rated" />
       </div>
 

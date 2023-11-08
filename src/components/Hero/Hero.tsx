@@ -3,9 +3,9 @@ import axios from 'axios';
 import './Hero.css';
 
 interface HeroProps {
-  property1: 'mobile' | 'default';
-  movieId: number;
-  contentType: 'movie' | 'tv';
+  property1?: 'mobile' | 'default';
+  movieId?: number;
+  contentType?: 'movie' | 'tv';
 }
 
 interface MovieData {
