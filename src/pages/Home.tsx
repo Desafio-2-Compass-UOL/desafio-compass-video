@@ -6,7 +6,7 @@ function Home() {
   return (
     <section className="catalog">
       <div className="hero">
-        <Hero property1="default"/>
+        <Hero property1="default" movieId={507089}/>
       </div>
 
       <div className="carousel">
