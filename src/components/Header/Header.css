@@ -4,12 +4,12 @@ header {
     padding: 0.5em 3.5em;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     z-index: 100;  
     background: linear-gradient(180deg, #0E1012 -50.62%, rgba(14, 16, 18, 0.00) 100%);
 }
 
-nav {
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +23,7 @@ nav {
     gap: 3em;
 }
 
-ul {
+.nav-ul {
     display: flex;
     align-items: center;
     list-style: none;
@@ -50,4 +50,38 @@ form {
     height: 3rem;
     border-radius: 3rem;
     border: 2px solid #02E7F5;
+}
+
+@media (max-width: 768px) {
+    header {
+        position: absolute;
+        padding: 2.2rem;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        font-size: 0.9rem;
+        
+    }
+    .nav-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .box {
+        position: relative;
+        bottom: 10em;
+        gap: 1.1em;
+    }
+    .nav-ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap:wrap ;
+    }
+    li {
+        margin-right: 0.6rem;
+        margin-left: 0.6rem;
+        margin-bottom: 0.8rem;
+    }
+    .logo {
+        padding: 1.1rem 1.1rem 4rem ;
+    }
 }

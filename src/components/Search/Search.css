@@ -27,7 +27,6 @@ input {
   
   select {
     display: flex;
-    padding: 0.1rem;
     flex-direction: column;
     align-items: flex-start;
     color: #999;
@@ -61,4 +60,29 @@ button, .closed {
 button:hover {
   color: #67BDFF;
 
+}
+
+option {
+  color: #160042;
+  background: var(--gray-200, #F3F5FB);
+  width: 11.25rem;
+  font-size: 1.0rem;
+
+}
+
+
+
+@media (max-width: 768px) {
+  .buttonContainer {
+    width: 12rem;
+    position: relative;
+    bottom: 1rem;
+  }
+  .buttonContainer form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    pad: 0.2rem;
+    
+  }
 }
