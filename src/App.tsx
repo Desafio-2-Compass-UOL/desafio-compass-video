@@ -11,6 +11,7 @@ import HalloweenCollectionPage from './pages/CollectionPage';
 import MoviesPage from './pages/MoviesPage'
 import Home from './pages/Home'
 import TvShowsPage from './pages/TvShowsPage'
+// import PrivateRoute from './components/PrivateRoutes/PrivateRoutes'
 
 function App() {
   return (
